@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: wasteland-3
+    runtime: node
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
